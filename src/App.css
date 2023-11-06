@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+
+/* Add a transition to the hr tag */
+.underline {
+  opacity: 1;
+  height: 2px; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* h1 tag styles */
+.header h1.hide {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* hide the HR element */
+.hidden-hr {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+
+.delete-button {
+  color: red;
+  margin-left: auto; 
+}
+
+/* Font style for the selected item */
+.selected-text {
+  font-size: 20px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
 }
 
-.App-link {
-  color: #61dafb;
+.header-right h1{
+  font-size: 31px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.selected-items {
+  display: flex; 
+  align-items: center;
+  height: 40px;
+}
+
+.selected-text {
+  margin-right: 10px;
+}
+
+.delete-button {
+  border: none;
+  background-color: #fff;
+}
+
+.header h1, .selected-items {
+  transition: none;
+  opacity: 1;
 }
